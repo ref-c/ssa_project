@@ -12,6 +12,7 @@ import urllib.parse
 from .models import GroupJoinRequest
 from .models import Group, Comment
 from .forms import CommentForm
+from .models import Event
 
 @login_required
 def request_to_join_group(request, group_id):
