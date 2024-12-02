@@ -6,8 +6,8 @@ SECRET_KEY = 'django-insecure-bxu#hk6gsvor67t=8l+1$q2y4)j9jg(ba20km0p$-43he_qrz^
 
 DEBUG = True
 
+RECAPTCHA_SECRET_KEY = "6LeWzo8qAAAAAHEwLIE3G10gtfbcTM-9AtfAlKIq"
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
 
 INSTALLED_APPS = [
     'users',

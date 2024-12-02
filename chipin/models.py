@@ -35,10 +35,12 @@ class Event(models.Model):
     members = models.ManyToManyField(User, related_name='event_memberships', blank=True)  
 
     def calculate_share(self):
-        members_count = self.group.members.count()
+        members_count = self.members.count()
         if members_count == 0:
             return 0
-        return self.total_spend / members_count
+        else:
+            unround_share = self.total_spend / members_count
+            round_share = round(unround_share, 2)
 
     def check_status(self):
         """ Check if all members' max spend can cover the event. """

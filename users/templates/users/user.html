@@ -7,3 +7,8 @@
     <p>This page is for user management functions.</p>
     <a href="{% url 'chipin:home' %}">Click through to ChipIn Functions</a>
 {% endblock %}
+
+<h1> Current Balance: ${{ balance }}</h1>
+<a href="{% url 'user:top_up' user.id %}">Make a Payment</a>
+<h1>Welcome, {{ user.first_name }}</h1>
+<p>Your current balance is ${{ balance }}</p>
